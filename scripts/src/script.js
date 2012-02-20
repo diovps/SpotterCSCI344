@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
 	$("#search-button").click(function(){
+		//var fixedAssoc;
 		$("#Box").fadeOut();
 		main();
 	});
@@ -11,7 +12,7 @@ $(document).ready(function() {
 
 
 function main() {
-    
+    var count = 0;    
     var search_term = $("#search").val();
     var s  = new Spotter("twitter.search",
 	{q:search_term,period:120,lang:"en"},
@@ -21,10 +22,8 @@ function main() {
     s.register(function(tweets) {
 	var fixedString = "";
 	var fixed = tweets.text.replace(/(@\w*)|(#\w*)|(http.*)|(\sRT\s)/ig,"").match(/\w*/g);
-	//var fixedAssoc = {};
-
+	
 	for(var i in fixed){
-		//fixedString+=fixed[i]+" ";
 		if(fixedAssoc.hasOwnProperty(fixed[i].toLowerCase())){
 		    fixedAssoc[fixed[i].toLowerCase()]+=1;
 		}else{
@@ -37,16 +36,33 @@ function main() {
 	for(var j in fixedAssoc){
 		fixedString += "Key: "+j + " " + "Value: "+fixedAssoc[j];
 	}
-
+	
+	if(count==10){	
+		s.stop();
+         	printStuff(fixedAssoc);
+	}else{
+	        count++;
+	}
 	//$("#tweets").append("<p>"+fixedString+"</p>");
 	//$("#tweets").append("<p>"+tweets.text+"</p>");
     });
-    s.start();
+    if(count!=10){
+        s.start();
+    }
 }
 
+function printStuff(array){
+	var count  = 0;
+	for(var i in array){
+		if(!(count>=10)){
+		    $("#tweets").append("<p id='sizing"+count+"'>"+i+" " +array[i]+"</p>");
+		}else{
+		    break;
+		}
+		count++
+	}
+}
 function sort(array){
-	/*this sorting function was sampled from
-	http://bytes.com/topic/javascript/answers/153019-sorting-associative-array-keys-based-values*/
  
 	var temp = [];
 	for(var j in array){

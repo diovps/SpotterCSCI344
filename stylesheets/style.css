@@ -2,10 +2,68 @@ body {
     background: #eef;
 }
 
-.red {
-    background: red;
+#tweets { 
+    position: absolute; 
+    top: 20%;
+    left: 40%;
+    border: 1px solid black;
+}
+#sizing0 {
+    color: red;
+    font-size: 7em;
 }
 
-.blue {
-   background: blue;
+#sizing1 {
+    color: blue;
+    font-size: 6.25em;
 }
+
+#sizing2 {
+    color: yellow;
+    font-size: 5.75em;
+}
+
+#sizing3 {
+    color: green;
+    font-size: 5em;
+}
+
+#sizing4 {
+    color: purple;
+    font-size: 4.25em;
+}
+
+#sizing5 {
+    color: gray;
+    font-size: 3.65em;
+}
+
+#sizing6 {
+    color: black;
+    -moz-transform: rotate(-90deg);
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    -webkit-transform: rotate(-90deg);
+    font-size: 3.35em;
+}
+
+#sizing7 {
+    color: blue;
+    font-size: 3em;
+}
+
+#sizing8 {
+    color: red;
+    font-size: 2.75em;
+}
+
+#sizing9 {
+    color: yellow;
+    -moz-transform: rotate(-90deg);
+    position: absolute; 
+    top: 15px;
+    left: 50px;
+    font-size: 2.45em;
+}
+
