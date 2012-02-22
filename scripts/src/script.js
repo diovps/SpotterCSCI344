@@ -4,9 +4,9 @@
 
 $(document).ready(function() {
 	$("#search-button").click(function(){
-		//var fixedAssoc;
-		$("#Box").fadeOut();
-		main();
+		$("#tweets div").remove();
+                $("#tweets p").remove();
+                main();
 	});
 });
 
@@ -56,7 +56,8 @@ function printStuff(array,search_term){
         $("#tweets").append("<p id='search-term'>" + search_term + "</p>");
 	for(var i in array){
 		if(!(count>=10)){
-		    $("#tweets").append("<p id='sizing"+count+"'>"+i+"</p>");
+		    //$("#tweets").append("<p id='sizing"+count+"'>"+i+"</p>");
+		    $("#tweets").append("<div id='sizing"+count+"'>"+"<p>"+i+"</p></div>");
 		}else{
 		    break;
 		}
