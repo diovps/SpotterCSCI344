@@ -3,9 +3,11 @@
  */
 
 $(document).ready(function() {
-	$("#search-button").click(function(){
+       $("#warning").hide();	
+       $("#search-button").click(function(){
 		$("#tweets div").remove();
                 $("#tweets p").remove();
+                $("#warning").fadeIn();
                 main();
 	});
 });
@@ -63,6 +65,7 @@ function printStuff(array,search_term){
 		}
 		count++
 	}
+        $("#warning").fadeOut();
 }
 function sort(array){
  

@@ -1,18 +1,31 @@
 body {
-    background: #eef;
+    background-color: #eef;
 }
+
 
 #search-term {
     background-color: black;
     color: white;
 }
+
+#warning {
+    float: left;
+    margin-top: 7px;
+}
+
+#Box {
+    margin-top: 7px;
+    position: absolute;
+    right: 0px;
+}
+
 #main {
    position: relative;
 }
 
 #tweets { 
     position: relative;
-    
+    margin-top: 150px;
     border: 1px solid black;
     height: 300px;
 }
