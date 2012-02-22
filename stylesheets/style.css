@@ -1,5 +1,5 @@
 body {
-    background-color: #eef;
+    background-color: black;
 }
 
 
@@ -45,12 +45,20 @@ body {
     bottom: 10%;
 }
 
-#sizing2 {
-    color: blue;
+#sizing10 {
+    color: cyan;
     position: absolute;
     -moz-transform: rotate(90deg); 
     right: 30%;
     bottom: 30%;
+}
+
+#sizing2 {
+   color: blue;
+   position: absolute;
+   -moz-transform: rotate(45deg);
+   right: 15%;
+   top: 25%;
 }
 
 #sizing3 {
@@ -145,6 +153,9 @@ body {
     font-size: 15px;
 }
 
+#sizing10 p {
+    font-size: 35px;
+}
 
 
 

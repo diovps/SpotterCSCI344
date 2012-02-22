@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function() {
-       $("#warning").hide();	
+       $("#warning").hide();
        $("#search-button").click(function(){
 		$("#tweets div").remove();
                 $("#tweets p").remove();
@@ -57,7 +57,7 @@ function printStuff(array,search_term){
 	var count  = 0;
         $("#tweets").append("<p id='search-term'>" + search_term + "</p>");
 	for(var i in array){
-		if(!(count>=10)){
+		if(!(count>10)){
 		    //$("#tweets").append("<p id='sizing"+count+"'>"+i+"</p>");
 		    $("#tweets").append("<div id='sizing"+count+"'>"+"<p>"+i+"</p></div>");
 		}else{
