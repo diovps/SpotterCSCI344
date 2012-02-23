@@ -48,6 +48,7 @@ body {
     position: absolute;
     left: 45%;
     bottom: 10%;
+    font-family: 'Shadows Into Light Two',cursive;
 }
 
 #sizing10 {
@@ -76,13 +77,14 @@ body {
     -webkit-transform: rotate(-90deg);
     left: 20%;
     top: 100px; 
+    font-family: 'Shadows Into Light Two',cursive;
 }
 
 #sizing4 {
     color: gray;
     position: absolute;
     left: 35%;
-    top: 100px;
+    top: 85px;
 }
 
 #sizing5 {

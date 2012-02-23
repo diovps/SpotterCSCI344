@@ -68,7 +68,7 @@ function printStuff(array,search_term){
         $("#warning").fadeOut();
 }
 function sort(array){
- 
+//Helped by code from http://bytes.com/topic/javascript/answers/153019-sorting-associative-array-keys-based-values 
 	var temp = [];
 	for(var j in array){
 	    temp.push([j,array[j]]);
