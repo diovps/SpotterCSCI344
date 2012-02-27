@@ -22,10 +22,15 @@ body {
 #main {
    position: relative;
 }
+
 #header {
    color: gray;
    position: absolute;
    top: 120px;   
+}
+
+#tweets div:hover {
+   cursor:move;
 }
 
 #tweets { 
