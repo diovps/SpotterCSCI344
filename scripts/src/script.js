@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
        $("#warning").hide();
+       $("#draggable").draggable();
        $("#search-button").click(function(){
 		$("#tweets div").remove();
                 $("#tweets p").remove();
@@ -60,7 +61,8 @@ function printStuff(array,search_term){
 		if(!(count>10)){
 		    //$("#tweets").append("<p id='sizing"+count+"'>"+i+"</p>");
 		    $("#tweets").append("<div id='sizing"+count+"'>"+"<p>"+i+"</p></div>");
-		}else{
+		    $("#sizing"+count).draggable();
+              	}else{
 		    break;
 		}
 		count++
